@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: armada-app-service
+spec:
+  selector:
+    app: armada-app
+  ports:
+    - protocol: TCP
+      port: 88
+      targetPort: 88
+  type: LoadBalancer
